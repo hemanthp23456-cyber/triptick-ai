@@ -3,70 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Triptick AI</title>
+  <title>Triptick AI — Smart Travel Assistant</title>
+
+  <!-- Optional: smooth scroll CSS -->
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; }
-    header { background: #1a73e8; color: white; padding: 20px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    .hero { background: #e8f0fe; padding: 100px 20px; text-align: center; }
-    .hero h1 { font-size: 2.5em; margin-bottom: 20px; }
-    .hero p { font-size: 1.2em; margin-bottom: 30px; }
-    .hero button { background: #ff5722; border: none; padding: 12px 25px; color: white; font-weight: bold; border-radius: 5px; cursor: pointer; font-size: 1em; }
-    .features { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 50px 20px; text-align: center; }
-    .feature { border: 1px solid #ddd; padding: 20px; border-radius: 10px; width: 250px; background: white; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-    .feature h3 { margin-bottom: 15px; color:#1a73e8; }
-    footer { background: #1a73e8; color: white; padding: 20px; text-align: center; margin-top: 50px; }
-    footer a { color: white; text-decoration: none; margin: 0 10px; }
-    footer a:hover { text-decoration: underline; }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    /* Header Navigation */
+    header {
+      background: #0d47a1;
+      color: white;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header h1 { margin: 0; font-size: 1.8rem; font-weight: bold; }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 8px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffca28;
+      border-bottom: 2px solid #ffca28;
+      padding-bottom: 2px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #0d47a1cc, #1976d2cc), url("https://images.unsplash.com/photo-1518684079‑c2026e7876f6?q=80&w=1200") center/cover no-repeat;
+      text-align: center;
+      padding: 110px 20px;
+      color: white;
+    }
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    .cta-btn {
+      background: #ff5722;
+      color: white;
+      padding: 15px 32px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .cta-btn:hover {
+      background: #e64a19;
+    }
+
+    /* Features Section */
+    #features {
+      background: #ffffff;
+      padding: 70px 20px;
+      text-align: center;
+    }
+    #features h3 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #0d47a1;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 30px 0;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .feature-box {
+      background: #f7f7f7;
+      padding: 22px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .feature-box h4 {
+      margin: 18px 0 10px;
+      color: #1976d2;
+      font-size: 1.2rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 18px 15px;
+      font-size: 0.95rem;
+    }
+    footer a {
+      color: #ffca28;
+      text-decoration: none;
+      margin: 0 8px;
+    }
   </style>
 </head>
 <body>
 
+<!-- Header / Navbar -->
 <header>
   <h1>Triptick AI</h1>
   <nav>
-    <a href="#">Home</a>
     <a href="#features">Features</a>
-    <a href="#">Explore</a>
-    <a href="#">Contact</a>
+    <a href="#features">Explore</a>
+    <a href="#features">Why Us</a>
   </nav>
 </header>
 
+<!-- Hero / Banner -->
 <section class="hero">
-  <h1>Smart Travel AI Assistant</h1>
-  <p>Your personal AI assistant to plan amazing trips in seconds!</p>
- <a href="#features" style="display:inline-block; padding:12px 25px; background:#ff5722; color:white; border-radius:5px; text-decoration:none; font-weight:bold;">
-  Explore
-</a>
-
+  <h2>Smart Travel AI Assistant</h2>
+  <p>Plan smart trips instantly with AI insights & personalized recommendations.</p>
+  <a href="#features" class="cta-btn">Explore Features</a>
 </section>
 
-<section id="features" class="features">
-  <div class="feature">
-    <h3>Smart AI</h3>
-    <p>Get personalized travel suggestions instantly.</p>
-  </div>
-  <div class="feature">
-    <h3>Fully Responsive</h3>
-    <p>Works perfectly on mobile, tablet, and desktop.</p>
-  </div>
-  <div class="feature">
-    <h3>Easy to Use</h3>
-    <p>Simple interface for a seamless experience.</p>
+<!-- Features Section -->
+<section id="features">
+  <h3>What Triptick AI Offers</h3>
+  <div class="features-grid">
+    <div class="feature-box">
+      <h4>📍 Instant Travel Ideas</h4>
+      <p>Get tailored trip routes in seconds based on your preferences.</p>
+    </div>
+    <div class="feature-box">
+      <h4>📱 Fully Responsive</h4>
+      <p>Looks and works great on phones, tablets & desktops.</p>
+    </div>
+    <div class="feature-box">
+      <h4>⚡ Easy & Fast</h4>
+      <p>Quick to use with an intuitive interface for all users.</p>
+    </div>
   </div>
 </section>
 
+<!-- Footer -->
 <footer>
-  <p>© 2026 Triptick AI | Made by IIT Patna Student</p>
-  <p>
-    <a href="https://www.linkedin.com/in/hemant-iitpatna/" target="_blank">LinkedIn</a> |
-    <a href="https://twitter.com/hemant_hp" target="_blank">Twitter</a> |
-    <a href="https://www.instagram.com/hemant_hp/" target="_blank">Instagram</a>
-  </p>
+  © 2026 Triptick AI — Made by IIT Patna Student · 
+  <a href="https://www.linkedin.com/in/hemant-iitpatna/" target="_blank">LinkedIn</a> |
+  <a href="https://twitter.com/hemant_hp" target="_blank">Twitter</a> |
+  <a href="https://www.instagram.com/hemant_hp/" target="_blank">Instagram</a>
 </footer>
 
 </body>
 </html>
+
 
 
